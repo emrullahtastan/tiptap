@@ -7,6 +7,7 @@ import type {
 } from '@tiptap/core'
 import { getRenderedAttributes, NodeView } from '@tiptap/core'
 import type { Node, Node as ProseMirrorNode } from '@tiptap/pm/model'
+import { NodeSelection } from '@tiptap/pm/state'
 import type { Decoration, DecorationSource, NodeView as ProseMirrorNodeView } from '@tiptap/pm/view'
 import type { ComponentType, NamedExoticComponent } from 'react'
 import { createElement, createRef, memo } from 'react'
@@ -237,13 +238,16 @@ export class ReactNodeView<
 
     this.selectionRafId = requestAnimationFrame(() => {
       this.selectionRafId = null
-      const { from, to } = this.editor.state.selection
+      const { selection } = this.editor.state
+      const { from } = selection
       const pos = this.getPos()
       if (typeof pos !== 'number') {
         return
       }
 
-      if (from <= pos && to >= pos + this.node.nodeSize) {
+      const isNodeSelection = selection instanceof NodeSelection && from === pos
+
+      if (isNodeSelection) {
         if (this.renderer.props.selected) {
           return
         }
