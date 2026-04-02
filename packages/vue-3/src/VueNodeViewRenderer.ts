@@ -222,7 +222,7 @@ class VueNodeView extends NodeView<Component, Editor, VueNodeViewRendererOptions
   handleSelectionUpdate() {
     const { selection } = this.editor.state
     const { from } = selection
-    const pos = this.getPos()
+    const pos = this.currentPos
 
     if (typeof pos !== 'number') {
       return
