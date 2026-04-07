@@ -1,5 +1,49 @@
 # Releases
 
+## v3.22.3
+
+### @tiptap/core
+
+#### Patch Changes
+
+- 4bb1c5f: Fixed `insertContentAt` corrupting the document when inserting inline content with marks at the start of a paragraph. The `from - 1` position adjustment now only applies to block-level content.
+
+### @tiptap/html
+
+#### Patch Changes
+
+- 4bb1c5f: Remove unnecessary `xmlns="http://www.w3.org/1999/xhtml"` attribute from `generateHTML` output by using `innerHTML` instead of `XMLSerializer` for HTML serialization.
+
+### @tiptap/starter-kit
+
+#### Patch Changes
+
+- Updated dependencies [4bb1c5f]
+  - @tiptap/core@3.22.3
+  - @tiptap/extension-dropcursor@3.22.3
+  - @tiptap/extension-gapcursor@3.22.3
+  - @tiptap/extension-list-item@3.22.3
+  - @tiptap/extension-list-keymap@3.22.3
+  - @tiptap/extension-blockquote@3.22.3
+  - @tiptap/extension-bold@3.22.3
+  - @tiptap/extension-bullet-list@3.22.3
+  - @tiptap/extension-code@3.22.3
+  - @tiptap/extension-code-block@3.22.3
+  - @tiptap/extension-document@3.22.3
+  - @tiptap/extension-hard-break@3.22.3
+  - @tiptap/extension-heading@3.22.3
+  - @tiptap/extension-horizontal-rule@3.22.3
+  - @tiptap/extension-italic@3.22.3
+  - @tiptap/extension-link@3.22.3
+  - @tiptap/extension-list@3.22.3
+  - @tiptap/extension-ordered-list@3.22.3
+  - @tiptap/extension-paragraph@3.22.3
+  - @tiptap/extension-strike@3.22.3
+  - @tiptap/extension-text@3.22.3
+  - @tiptap/extension-underline@3.22.3
+  - @tiptap/extensions@3.22.3
+  - @tiptap/pm@3.22.3
+
 ## v3.22.2
 
 ### @tiptap/core
