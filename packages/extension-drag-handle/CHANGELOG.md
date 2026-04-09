@@ -1,5 +1,16 @@
 # @tiptap/extension-drag-handle
 
+## 3.22.4
+
+### Patch Changes
+
+- 040da0d: Fix drag handle ghost image alignment when dragging blocks inside offset layouts, and preserve correct ghost image behavior for RTL content.
+- Updated dependencies [64f36b8]
+  - @tiptap/core@3.22.4
+  - @tiptap/extension-collaboration@3.22.4
+  - @tiptap/extension-node-range@3.22.4
+  - @tiptap/pm@3.22.4
+
 ## 3.22.3
 
 ### Patch Changes

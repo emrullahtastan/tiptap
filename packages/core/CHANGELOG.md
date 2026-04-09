@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.22.4
+
+### Patch Changes
+
+- 64f36b8: Fix text selection collapsing after toggling off a list with AllSelection
+  - @tiptap/pm@3.22.4
+
 ## 3.22.3
 
 ### Patch Changes
